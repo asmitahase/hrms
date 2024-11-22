@@ -48,6 +48,9 @@
    "search_index": 1
   },
   {
+   "allow_on_submit": 1,
+   "fetch_from": "company.default_letter_head",
+   "fetch_if_empty": 1,
    "fieldname": "letter_head",
    "fieldtype": "Link",
    "label": "Letter Head",
@@ -240,47 +243,20 @@
  "is_submittable": 1,
  "links": [],
 <<<<<<< HEAD
+<<<<<<< HEAD
  "modified": "2024-02-06 13:06:59.579135",
 =======
  "modified": "2024-11-21 18:02:55.785057",
 >>>>>>> 5e5332404 (fix: removed "fetch from" setting on letter head in salary structure doctype, to make it editable, set the company defualt letter head using form script instead)
+=======
+ "modified": "2024-11-22 11:17:28.384386",
+>>>>>>> 18dc6fc4a (fix: added "fetch from company default letter head" back, with "fetch if empty" to make the field editable, intead of using form script to set the value)
  "modified_by": "Administrator",
  "module": "Payroll",
  "name": "Salary Structure",
  "naming_rule": "Set by user",
  "owner": "Administrator",
- "permissions": [
-  {
-   "amend": 1,
-   "cancel": 1,
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "HR User",
-   "share": 1,
-   "submit": 1,
-   "write": 1
-  },
-  {
-   "amend": 1,
-   "cancel": 1,
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "import": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "HR Manager",
-   "share": 1,
-   "submit": 1,
-   "write": 1
-  }
- ],
+ "permissions": [],
  "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
