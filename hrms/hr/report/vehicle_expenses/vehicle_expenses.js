@@ -13,14 +13,14 @@ frappe.query_reports["Vehicle Expenses"] = {
 				let filter_based_on = frappe.query_report.get_filter_value("filter_based_on");
 
 				if (filter_based_on == "Fiscal Year") {
-					set_filter_requirement("fiscal_year", true);
-					set_filter_requirement("from_date", false);
-					set_filter_requirement("to_date", false);
+					set_reqd_filter("fiscal_year", true);
+					set_reqd_filter("from_date", false);
+					set_reqd_filter("to_date", false);
 				}
 				if (filter_based_on == "Date Range") {
-					set_filter_requirement("fiscal_year", false);
-					set_filter_requirement("from_date", true);
-					set_filter_requirement("to_date", true);
+					set_reqd_filter("fiscal_year", false);
+					set_reqd_filter("from_date", true);
+					set_reqd_filter("to_date", true);
 				}
 			},
 		},
@@ -61,7 +61,7 @@ frappe.query_reports["Vehicle Expenses"] = {
 	],
 };
 
-function set_filter_requirement(fieldname, is_reqd) {
+function set_reqd_filter(fieldname, is_reqd) {
 	let filter = frappe.query_report.get_filter(fieldname);
 	filter.df.reqd = is_reqd;
 	filter.refresh();
