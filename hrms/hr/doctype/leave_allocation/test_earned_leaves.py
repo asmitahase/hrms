@@ -1118,7 +1118,6 @@ class TestLeaveAllocation(HRMSTestSuite):
 			annual_allocation=11,
 		)
 		frappe.flags.current_date = this_year_start
-		# 11 leaves get carried forward from last year with this assignment
 		make_policy_assignment(
 			self.employee,
 			allocate_on_day="Last Day",
