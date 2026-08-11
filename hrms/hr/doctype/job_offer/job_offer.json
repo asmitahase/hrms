@@ -19,6 +19,32 @@
   "designation",
   "company",
   "status",
+  "department",
+  "grade",
+  "employment_type",
+  "column_break_role",
+  "branch",
+  "reports_to",
+  "date_of_joining",
+  "compensation_tab",
+  "salary_structure",
+  "currency",
+  "column_break_compensation",
+  "base",
+  "variable",
+  "ctc",
+  "ctc_breakup_section",
+  "ctc_breakup",
+  "leave_policy_tab",
+  "leave_policy",
+  "column_break_leave",
+  "holiday_list",
+  "employment_policy_tab",
+  "probation_period_days",
+  "notice_period_during_probation",
+  "notice_number_of_days",
+  "column_break_employment_policy",
+  "working_hours",
   "section_break_4",
   "job_offer_term_template",
   "offer_terms",
@@ -200,6 +226,17 @@
    "options": "currency"
   },
   {
+   "fieldname": "ctc_breakup_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "salary_structure",
+   "fieldname": "ctc_breakup",
+   "fieldtype": "Table",
+   "label": "CTC Break-up",
+   "options": "Job Offer Component"
+  },
+  {
    "fieldname": "leave_policy_tab",
    "fieldtype": "Tab Break",
    "label": "Leave Policy"
@@ -333,7 +370,7 @@
  "modified_by": "Administrator",
  "module": "HR",
  "name": "Job Offer",
- "naming_rule": "Expression (old style)",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
