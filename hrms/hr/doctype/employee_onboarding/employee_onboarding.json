@@ -8,22 +8,24 @@
  "field_order": [
   "job_offer",
   "job_applicant",
-  "employee_onboarding_template",
-  "column_break_7",
+  "employee_name",
   "company",
+  "column_break_7",
+  "date_of_joining",
+  "boarding_begins_on",
+  "employee_onboarding_template",
   "boarding_status",
   "onboarding_stage",
   "project",
+  "checklist_section",
+  "onboarding_checklist",
   "details_section",
   "employee",
-  "employee_name",
   "department",
   "designation",
   "employee_grade",
   "holiday_list",
   "column_break_13",
-  "date_of_joining",
-  "boarding_begins_on",
   "user_section",
   "personal_email",
   "company_email",
@@ -46,8 +48,6 @@
   "column_break_employee_details",
   "gender",
   "date_of_birth",
-  "assignments_section",
-  "assignments",
   "table_for_activity",
   "activities",
   "notify_users_by_email",
@@ -106,7 +106,8 @@
    "fieldtype": "Select",
    "label": "Onboarding Stage",
    "options": "Create User\nUpload Documents\nAppointment Letter\nCreate Employee\nAssign Masters\nActivities",
-   "read_only": 1
+   "read_only": 1,
+   "hidden": 1
   },
   {
    "allow_on_submit": 1,
@@ -167,7 +168,8 @@
   {
    "fieldname": "table_for_activity",
    "fieldtype": "Section Break",
-   "label": "Onboarding Activities"
+   "label": "Onboarding Activities",
+   "hidden": 1
   },
   {
    "fieldname": "activities",
@@ -187,7 +189,8 @@
   {
    "fieldname": "details_section",
    "fieldtype": "Section Break",
-   "label": "Employee Details"
+   "label": "Employee Details",
+   "hidden": 1
   },
   {
    "fieldname": "column_break_13",
@@ -208,7 +211,8 @@
   {
    "fieldname": "user_section",
    "fieldtype": "Section Break",
-   "label": "User Account"
+   "label": "User Account",
+   "hidden": 1
   },
   {
    "fetch_from": "job_offer.applicant_email",
@@ -247,7 +251,8 @@
   {
    "fieldname": "documents_section",
    "fieldtype": "Section Break",
-   "label": "Documents to Upload"
+   "label": "Documents to Upload",
+   "hidden": 1
   },
   {
    "fieldname": "documents",
@@ -284,7 +289,8 @@
   {
    "fieldname": "appointment_letter_section",
    "fieldtype": "Section Break",
-   "label": "Appointment Letter"
+   "label": "Appointment Letter",
+   "hidden": 1
   },
   {
    "fieldname": "appointment_letter",
@@ -302,7 +308,8 @@
   {
    "fieldname": "employee_details_section",
    "fieldtype": "Section Break",
-   "label": "Employee Details"
+   "label": "Employee Details",
+   "hidden": 1
   },
   {
    "fieldname": "branch",
@@ -338,20 +345,17 @@
    "label": "Date of Birth"
   },
   {
-   "fieldname": "assignments_section",
-   "fieldtype": "Section Break",
-   "label": "Master Assignments"
+   "fieldname": "checklist_section",
+   "fieldtype": "Section Break"
   },
   {
-   "fieldname": "assignments",
-   "fieldtype": "Table",
-   "label": "Assignments",
-   "options": "Employee Onboarding Assignment"
+   "fieldname": "onboarding_checklist",
+   "fieldtype": "HTML"
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2026-09-18 17:10:10.398220",
+ "modified": "2026-10-07 15:21:11.898969",
  "modified_by": "Administrator",
  "module": "HR",
  "name": "Employee Onboarding",
